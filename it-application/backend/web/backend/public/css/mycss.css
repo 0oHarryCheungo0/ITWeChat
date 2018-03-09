@@ -1,0 +1,360 @@
+/*未登录*/
+*{ margin:0px; padding:0px;}
+html{-webkit-text-size-adjust: none;/*禁止页面文字自动调整大小*/height: 100%;}
+body{color:#676767; font-family:"Hiragino Sans GB","Microsoft YaHei",SimHei,sans-serif;min-width:320px;font-size:14px;background:#fff;line-height:1;height: 100%;}
+ul,li{ list-style:none;}
+.clearfix:after{clear:both;content:'';display:block;font-size:0;line-height:0;height:0;visibility:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+.clear{ clear:both;}
+a{text-decoration:none;}
+a,button,input,select{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input,textarea,select{border:0px;border-radius:0px;-webkit-border-radius:0;outline:none;vertical-align:middle; }
+input,textarea{-webkit-appearance:none; -moz-appearance:none;}
+textarea{ resize:none;}
+img{ border:0px; vertical-align:middle}
+.middle{vertical-align:middle}
+i,em{font-style:normal;}
+a{ cursor:pointer;}
+.blod{ font-weight:bold;}
+input:focus,textarea:focus{color:#454545;}
+/*查询结果*/
+.ks_bj{
+	/*background: url(../images/ksbj.png) no-repeat 50% 50%;*/
+	width: 100%;
+	height: 100%;
+	/*background-size: 100% 100%;*/
+	position: relative;
+	z-index: 1;
+}
+.ks_bj:after{
+	display: block;
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/ksbj.png) no-repeat 50% 50%;
+	background-size: 100% 100%;
+	z-index: -1;
+}
+.ks_bj_revetion{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*height: 100%;*/
+	z-index: 2;
+}
+.kaisa_logo{
+	text-align: center;
+	padding: 0.9375rem 0 0.46875rem 0;
+}
+.kaisa_logo img{
+	width: 2.8125rem;
+}
+.kaisa_title{
+	padding-bottom: 0.25rem;
+	border-bottom: 1px solid #a6874d;
+	color: #5d0b0c;
+	font-size: 0.625rem;
+	font-weight: bold;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	letter-spacing: 5px;
+}
+.kaisa_serch{
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+	padding: 0.46875rem 0;
+}
+.kaisa_serch p{
+	color: #000;
+	font-size: 0.4375rem;
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 0.3125rem;
+	letter-spacing: 1px;
+}
+.kaisa_serch_k{
+	display: -webkit-flex;     
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    /* for uc */
+    display: -webkit-box; 
+    -webkit-box-align: center; 
+    width: 100%;
+    position: relative;
+    border:1px solid #cfcfcf;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 1px;
+}
+.kaisa_serch_l{
+	-webkit-flex: 1;
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex:1;
+    -ms-flex: 1;
+    padding: 0 2px;
+}
+.kaisa_serch_l input{
+	width: 100%;
+	display: block;
+	height: 0.9375rem;
+	line-height: 0.9375rem;
+}
+.kaisa_serch_r{
+	width: 1.875rem;
+}
+.kaisa_serch_r a{
+	background: #1db753;
+	color: #fff;
+	font-size: 0.375rem;
+	display: block;
+	text-align: center;
+	height: 0.9375rem;
+	line-height: 0.9375rem;
+	width: 1.875rem;
+	border-radius: 4px;
+}
+.kaisa_wifi{
+	text-align: center;
+}
+.kaisa_wifi img{
+	width: 1.5625rem;
+}
+.kaisa_wifi_p{
+	padding: 0.25rem 0 0 0;
+}
+.kaisa_wifi_p b{
+	display: block;
+	color: #3b3c3c;
+	font-size: 0.4375rem;
+	line-height: 0.5625rem;
+	letter-spacing: 1px;
+}
+.kaisa_wifi_p p{
+	color: #1a1a1a;
+	font-size: 0.4375rem;
+	line-height: 0.5625rem;
+	letter-spacing: 1px;
+}
+.kaisa_wifi_p p u{
+	font-weight: bolder;
+	margin: 0 5px;
+}
+.kaisa_pater{
+	width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.3125rem 0;
+}
+.kaisa_pater ul{
+	/* for uc */
+    display: -webkit-box; 
+    -webkit-box-align: center; 
+	display: -webkit-flex;     
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+.kaisa_pater ul li{
+	-webkit-flex: 0 0 20%;
+    flex: 0 0 20%;
+    -webkit-box-flex: 0 0 20%;
+    -moz-box-flex: 0 0 20%;
+    -ms-flex: 0 0 20%;
+    text-align: center;
+    padding: 5px 0;
+}
+.kaisa_pater ul li a{
+	display: block;
+	padding: 0 5px;
+}
+.kaisa_pater ul li a img{
+	width: 100%;
+}
+/*@media (min-width: 641px){
+    .ks_bj{
+		background: url(../images/ksbj.png) no-repeat 50% 50%;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+	}
+}*/
+
+/*店铺列表*/
+.stro_list{
+	display: block;
+	border:1px solid #e6e6e6;
+}
+.stro_list_k{
+	display: block;
+	width: 99%;
+	padding-left: 1%;
+}
+.stro_list_single{
+	width: 32%;
+	min-width: 300px;
+	float: left;
+	margin: 0 1% 0 0;
+	border:1px solid #eee;
+	box-sizing: border-box;
+}
+.single_title{
+	font-size: 14px;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	color: #000;
+	background: -webkit-gradient(linear, 100% 0%, 100% 99%, from(#fff), to(#ddd));
+	padding-left: 8px;
+}
+/*.single_title span{
+	color: #f00;
+}*/
+.single_lable{
+	padding:8px; 
+}
+.single_lable_title{padding-bottom: 10px;}
+.single_lable_title label{
+	color: #878787;
+	font-size: 12px;
+	height: 30px;
+	line-height: 30px;
+	padding-right: 50px;
+}
+.single_lable_title input{
+	border:1px solid #eee;
+	color: #878787;
+	font-size: 12px;
+	height: 30px;
+	line-height: 30px;
+	width: 150px;
+	padding: 0 5px;
+}
+.single_lable_input{
+	border:1px solid #ddd;
+	border-radius: 3px;
+	padding: 8px;
+	margin-bottom: 10px;
+}
+.single_lable_line{
+	padding: 5px 0;
+}
+.single_lable_line span{
+	color: #878787;
+	font-size: 12px;
+	height: 30px;
+	line-height: 30px;
+	width: 100px;
+	float: left;
+}
+.single_lable_line select{
+	height: 30px;
+	line-height: 30px;
+	margin-left: 100px;
+	display: block;
+	color: #878787;
+	border:1px solid #ddd;
+	box-sizing: border-box;
+	width: 150px;
+}
+.single_lable_line input{
+	border:1px solid #ddd;
+	box-sizing: border-box;
+	height: 30px;
+	line-height: 30px;
+	width: 150px;
+	display: block;
+	margin-left: 100px;
+	padding: 0 5px;
+	color: #878787;
+}
+.stro_list_bot{
+	padding:10px 1%;
+}
+.stro_list_bot a{
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	color: #000;
+	text-align: center;
+	background: #e9e9ea;
+	border:1px solid #ddd;
+	font-size: 12px;
+	width: 70px;
+	margin-right: 10px;
+}
+.stro_list_bot a span{
+	color: #f00;
+	margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

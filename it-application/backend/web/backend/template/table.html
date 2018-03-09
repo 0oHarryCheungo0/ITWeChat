@@ -1,0 +1,301 @@
+<div style="background: #fff;padding: 15px;margin-bottom: 40px;">
+
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+        <legend>默认表格</legend>
+    </fieldset>
+
+    <div class="layui-form layui-box">
+        <div class="layui-form-item">
+
+            <div class="layui-inline">
+                <label class="layui-form-label">单行输入框</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">单行选择框</label>
+                <div class="layui-input-block">
+                    <select name="interest" lay-filter="aihao">
+                        <option value=""></option>
+                        <option value="0">写作</option>
+                        <option value="1" selected="">阅读</option>
+                        <option value="2">游戏</option>
+                        <option value="3">音乐</option>
+                        <option value="4">旅行</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">单行输入框</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">单行输入框</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">复选框</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="like[write]" title="写作">
+                    <input type="checkbox" name="like[read]" title="阅读" checked="">
+                    <input type="checkbox" name="like[game]" title="游戏">
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">单选框</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="sex" value="男" title="男" checked="">
+                    <input type="radio" name="sex" value="女" title="女">
+                    <input type="radio" name="sex" value="禁" title="禁用" disabled="">
+                </div>
+            </div>
+
+
+
+            <div class="layui-inline">
+                <label class="layui-form-label"><button class="layui-btn layui-btn-small">默认按钮</button></label>
+            </div>
+
+        </div>
+    </div>
+
+    <table class="layui-table">
+        <colgroup>
+            <col width="150">
+            <col width="150">
+            <col width="200">
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>人物</th>
+            <th>民族</th>
+            <th>出场时间</th>
+            <th>格言</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>贤心</td>
+            <td>汉族</td>
+            <td>1989-10-14</td>
+            <td>人生似修行</td>
+            <td> <button class="layui-btn layui-btn-small  layui-btn-danger"><i class="layui-icon">&#xe640;</i></button><button class="layui-btn  layui-btn-small"><i class="layui-icon">&#xe642;</i></button></td>
+        </tr>
+        <tr>
+            <td>张爱玲</td>
+            <td>汉族</td>
+            <td>1920-09-30</td>
+            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+            <td class="admin_btn">
+                <button class="layui-btn layui-btn-primary layui-btn-small">原始按钮</button>
+                <button class="layui-btn layui-btn-small">默认按钮</button>
+                <button class="layui-btn layui-btn-normal layui-btn-small">百搭按钮</button>
+                <button class="layui-btn layui-btn-warm layui-btn-small">暖色按钮</button>
+                <button class="layui-btn layui-btn-danger layui-btn-small">删除</button>
+                <button class="layui-btn layui-btn-disabled layui-btn-small">禁用按钮</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Helen Keller</td>
+            <td>拉丁美裔</td>
+            <td>1880-06-27</td>
+            <td> Life is either a daring adventure or nothing.</td>
+            <td><a class="a-link a-delete">删除</a><a class="a-link a-alter">修改</a><a class="a-link a-check">查看</a></td>
+        </tr>
+        <tr>
+            <td>岳飞</td>
+            <td>汉族</td>
+            <td>1103-北宋崇宁二年</td>
+            <td>教科书再滥改，也抹不去“民族英雄”的事实</td>
+            <td><a class="a-link a-delete">删除</a><a class="a-link a-alter">修改</a><a class="a-link a-check">查看</a></td>
+        </tr>
+        <tr>
+            <td>孟子</td>
+            <td>华夏族（汉族）</td>
+            <td>公元前-372年</td>
+            <td>猿强，则国强。国强，则猿更强！ </td>
+            <td><a class="a-link a-delete">删除</a><a class="a-link a-alter">修改</a><a class="a-link a-check">查看</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- 通用-970*90 -->
+    <div style="margin-top: 20px;">
+        <ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-6111334333458862" data-ad-slot="6835627838"></ins>
+    </div>
+
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+        <legend>行边框表格</legend>
+    </fieldset>
+
+    <table class="layui-table" lay-skin="line">
+        <colgroup>
+            <col width="150">
+            <col width="150">
+            <col width="200">
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>人物</th>
+            <th>民族</th>
+            <th>出场时间</th>
+            <th>格言</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>贤心</td>
+            <td>汉族</td>
+            <td>1989-10-14</td>
+            <td>人生似修行</td>
+        </tr>
+        <tr>
+            <td>张爱玲</td>
+            <td>汉族</td>
+            <td>1920-09-30</td>
+            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+        </tr>
+        <tr>
+            <td>Helen Keller</td>
+            <td>拉丁美裔</td>
+            <td>1880-06-27</td>
+            <td> Life is either a daring adventure or nothing.</td>
+        </tr>
+        <tr>
+            <td>岳飞</td>
+            <td>汉族</td>
+            <td>1103-北宋崇宁二年</td>
+            <td>教科书再滥改，也抹不去“民族英雄”的事实</td>
+        </tr>
+        <tr>
+            <td>孟子</td>
+            <td>华夏族（汉族）</td>
+            <td>公元前-372年</td>
+            <td>猿强，则国强。国强，则猿更强！ </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+        <legend>列边框表格</legend>
+    </fieldset>
+
+    <table class="layui-table" lay-even="" lay-skin="row">
+        <colgroup>
+            <col width="150">
+            <col width="150">
+            <col width="200">
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>人物</th>
+            <th>民族</th>
+            <th>出场时间</th>
+            <th>格言</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>贤心</td>
+            <td>汉族</td>
+            <td>1989-10-14</td>
+            <td>人生似修行</td>
+        </tr>
+        <tr>
+            <td>张爱玲</td>
+            <td>汉族</td>
+            <td>1920-09-30</td>
+            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+        </tr>
+        <tr>
+            <td>Helen Keller</td>
+            <td>拉丁美裔</td>
+            <td>1880-06-27</td>
+            <td> Life is either a daring adventure or nothing.</td>
+        </tr>
+        <tr>
+            <td>岳飞</td>
+            <td>汉族</td>
+            <td>1103-北宋崇宁二年</td>
+            <td>教科书再滥改，也抹不去“民族英雄”的事实</td>
+        </tr>
+        <tr>
+            <td>孟子</td>
+            <td>华夏族（汉族）</td>
+            <td>公元前-372年</td>
+            <td>猿强，则国强。国强，则猿更强！ </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+        <legend>无边框表格</legend>
+    </fieldset>
+
+    <table class="layui-table" lay-even="" lay-skin="nob">
+        <colgroup>
+            <col width="150">
+            <col width="150">
+            <col width="200">
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>人物</th>
+            <th>民族</th>
+            <th>出场时间</th>
+            <th>格言</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>贤心</td>
+            <td>汉族</td>
+            <td>1989-10-14</td>
+            <td>人生似修行</td>
+        </tr>
+        <tr>
+            <td>张爱玲</td>
+            <td>汉族</td>
+            <td>1920-09-30</td>
+            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+        </tr>
+        <tr>
+            <td>Helen Keller</td>
+            <td>拉丁美裔</td>
+            <td>1880-06-27</td>
+            <td> Life is either a daring adventure or nothing.</td>
+        </tr>
+        <tr>
+            <td>岳飞</td>
+            <td>汉族</td>
+            <td>1103-北宋崇宁二年</td>
+            <td>教科书再滥改，也抹不去“民族英雄”的事实</td>
+        </tr>
+        <tr>
+            <td>孟子</td>
+            <td>华夏族（汉族）</td>
+            <td>公元前-372年</td>
+            <td>猿强，则国强。国强，则猿更强！ </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    layui.use(['form', 'layedit', 'laydate'], function(){
+        var form = layui.form
+    });
+</script>

@@ -1,0 +1,6 @@
+@font-face {font-family: "helvetic";
+    src: url('HelveticaNeueMed.ttf?t=1488785752690') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+}
+@font-face {font-family: "helveticBd";
+    src: url('HelveticaNeueBd.ttf?t=1488785752691') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+}

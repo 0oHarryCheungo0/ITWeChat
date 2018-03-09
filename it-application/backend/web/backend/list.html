@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/layui/css/layui.css"  media="all">
+    <link rel="stylesheet" href="public/css/adminCss.css">
+    <link rel="stylesheet" href="public/IconFont/iconfont.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="public/js/jquery.min.js"></script>
+    <!--AngularJS文件-->
+    <script src="public/js/angular.min.js"></script>
+    <script src="public/js/angular-route.js"></script>
+    <!-- 最新的 layui 核心 JavaScript 文件 -->
+    <script src="public/layui/layui.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="public/js/bootstrap.min.js"></script>
+    <!-- 通用js -->
+    <script src="public/js/common.js"></script>
+    <script>
+        //模块
+        var app = angular.module('myApp', ['ngRoute']);
+        app.config(['$routeProvider',function($routeProvider){
+            $routeProvider
+                    .when('/',{templateUrl:'template/index.html'})
+                    .when('/form',{templateUrl: 'template/form.html'})
+                    .when('/table',{templateUrl: 'template/table.html'})
+                    .when('/tab',{templateUrl:'template/tab.html'})
+                    .when('/font',{templateUrl:'template/font.html'})
+                    .when('/formVerify',{templateUrl:'template/formVerify.html'})
+                    .otherwise({redirectTo:'/'});
+        }]);
+    </script>
+</head>
+<body ng-app="myApp" >
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default admin-navbar" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/">项目名称</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/">首页</a></li>
+                <li><a href="#/form">表单页面</a></li>
+                <li><a href="#/table">表格页面</a></li>
+                <li><a href="#/tab">选项卡</a></li>
+                <li><a href="#/font">字体图标</a></li>
+                <li><a href="#/formVerify">表单通用验证</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../navbar/">Default</a></li>
+                <li><a href="../navbar-static-top/">Static top</a></li>
+                <li><a href="./">Fixed top</a></li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">abcquanef@qq.com<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="containerBox">
+    <div class="admin-left-nav" id="adminNav">
+        <div class="admin-left-navBox">
+            <div class="left-nav-box">
+                <div class="extend"><span class="iconfont icon-systole"></span></div>
+                <div class="module">
+                    <div class="module-top"><a data-toggle="tooltip" data-placement="right" title="产品与服务"><span class="pull-right iconfont icon-cog"></span><span class="iconfont icon-downBottom module-title"></span><span class="titleHtml">产品与服务</span></a></div>
+                    <ul>
+                        <li><a href="/" data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li class="active"><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                    </ul>
+                </div>
+                <div class="module">
+                    <div class="module-top"><a data-toggle="tooltip" data-placement="right" title="产品与服务2"><span class="pull-right iconfont icon-cog"></span><span class="iconfont icon-downBottom module-title"></span><span class="titleHtml">产品与服务2</span></a></div>
+                    <ul>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                    </ul>
+                </div>
+                <div class="module">
+                    <div class="module-top"><a data-toggle="tooltip" data-placement="right" title="产品与服务3"><span class="pull-right iconfont icon-cog"></span><span class="iconfont icon-downBottom module-title"></span><span class="titleHtml">产品与服务3</span></a></div>
+                    <ul>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a data-toggle="tooltip" data-placement="right" title="某产品的名称"><div class="icoBox pull-left"><span class="glyphicon glyphicon-gift"></span></div><span class="fontBox pull-left">某产品的名称xxx</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="admin-right-main-left">
+        <div class="admin-rightBox">
+            <div class="admin-rightBox-nav">
+                <h3>产品与服务</h3>
+                <ul>
+                    <li class="active"><a href="#/"><span class="fontBox pull-left">首页</span></a></li>
+                    <li><a href="#/form"><span class="fontBox pull-left">表单页面</span></a></li>
+                    <li><a href="#/table"><span class="fontBox pull-left">表格页面</span></a></li>
+                    <li><a href="#/tab"><span class="fontBox pull-left">选项卡</span></a></li>
+                    <li><a href="#/font"><span class="fontBox pull-left">字体图标</span></a></li>
+                </ul>
+                <div class="module">
+                    <div class="module-top"><a><span class="iconfont icon-downBottom module-title"></span><span class="titleHtml">产品与服务</span></a></div>
+                    <ul>
+                        <li><a href="/"><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a><span class="fontBox pull-left">某产品的名称</span></a></li>
+                        <li><a><span class="fontBox pull-left">某产品的名称</span></a></li>
+                    </ul>
+                </div>
+                <ul>
+                    <li><a href="/"><span class="fontBox pull-left">某产品的名称</span></a></li>
+                    <li><a><span class="fontBox pull-left">某产品的名称</span></a></li>
+                    <li><a><span class="fontBox pull-left">某产品的名称</span></a></li>
+                    <li><a><span class="fontBox pull-left">某产品的名称</span></a></li>
+                    <li><a><span class="fontBox pull-left">某产品的名称</span></a></li>
+                    <li><a href="/"><span class="fontBox pull-left">某产品的名称</span></a></li>
+                    <li><a><span class="fontBox pull-left">某产品的名称</span></a></li>
+                    <li><a><span class="fontBox pull-left">某产品的名称</span></a></li>
+                    <li><a><span class="fontBox pull-left">某产品的名称</span></a></li>
+                    <li><a><span class="fontBox pull-left">某产品的名称xxxx</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="admin-rightBox-span">
+        <span class="glyphicon glyphicon-indent-right"></span>
+        <span class="glyphicon glyphicon-indent-left"></span>
+    </div>
+    <div class="admin-right-box">
+        <div class="admin-right-main" style="height:1200px;background: #fff;margin-left: 360px;">
+                <!--AngularJS-->
+                <div ng-view></div>
+                <!--AngularJS-->
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

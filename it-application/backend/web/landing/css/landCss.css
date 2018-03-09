@@ -1,0 +1,46 @@
+/*格式化样式*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;border:0;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,th,var {font-style:normal;font-weight:normal}
+ol,ul {list-style:none}
+caption,th {text-align:left}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal}
+q:before,q:after {content:''}
+abbr,acronym { border:0}
+form{ display:inline;}
+a{ text-decoration:none;}
+button, input, select, textarea { font-size:100%; }
+a:hover { text-decoration:none; }
+input{ border:none 0; vertical-align:middle;}
+body, button, input, select, textarea {font: 14px/1.5 "微软雅黑","Heiti SC";  vertical-align: middle;}
+.hidden{display: none;}
+.left{float: left;}
+.right{float:right;}
+/* 清除浮动 */
+.clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clear{clear: both;}
+
+.main{width: 80%;margin: 0 auto;}
+.mainImg{width: 100%;}
+
+.landTop{background: #fff;height:85px;line-height:85px;}
+.landTop h3{color: #f98a05;font-size: 18px;}
+.landTop h3 small{font-size: 14px;color: #8b8b8b;padding-left:4px;}
+.landBox{width: 100%;position: relative;}
+.landPosition{position: absolute;z-index: 2;width: 100%;height: 100%;left: 0;top: 0;}
+.landMain{position: relative;}
+.infoBox{width:30%;background:url("../images/bg60.jpg");position: absolute;z-index: 2;right:50px;top:100px;border-radius: 4px;-moz-box-shadow: 0px 1px 13px #d3d6d5;  -webkit-box-shadow: 0px 1px 13px #d3d6d5;  box-shadow: 0px 1px 13px #d3d6d5;padding-top: 20px;padding-bottom: 25px;}
+.infoBox h3{font-size: 18px;padding-bottom:8px;border-bottom: 1px solid #e2e2e2;margin-bottom: 15px;}
+.infoBox h3 span{color: #f9a805;}
+.infoBox p{padding-bottom: 5px;}
+.message{color: #f91605;font-size: 12px;padding-left: 5px;}
+.inputBox{width: 100%;position: relative;background: #f2f4f4;border-radius: 4px;height: auto;margin-bottom: 15px;}
+.inputBox input{position: absolute;z-index: 2;top: 0;left: 0;background: none;border: none;width:90%; padding-left:10%; padding-top:6px;padding-bottom: 6px;}
+.inputBox .iconBox{padding-top:6px;padding-left: 5px;padding-bottom: 4px;}
+.inputBox .iconBox span{color: #afb0b0;padding-left: 3px;}
+.btnBox{width: 100%;}
+.btnBox_l{width:50%;}
+.btnBox_l a{color: #fff;background: #f9a805;width: 90%;display: block;text-align: center;padding:6px 0;border-radius: 2px;}
+.btnBox_r{width:50%;padding-top: 6px;}
+.btInfo{padding-top:10px;color: #808080;font-size: 12px;}

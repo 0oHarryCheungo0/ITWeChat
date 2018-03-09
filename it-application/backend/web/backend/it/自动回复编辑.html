@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="http://itwechat.vsource.com.cn/backend/web/backend/public/layui/css/layui.css" media="all">
+    <script src="http://itwechat.vsource.com.cn/backend/web/backend/public/js/jquery-1.10.2.min.js"></script>
+    <script src="http://itwechat.vsource.com.cn/backend/web/backend/public/layui/layui.js"></script>
+
+</head>
+<body>
+<style>
+    .layui-form-label {
+        width: 150px
+    }
+
+    legend {
+        width: auto;
+        border-bottom: none;
+        margin-bottom: 0px;
+    }
+
+    .layui-layer-title {
+        background: #09c;
+        color: #FFF;
+        border: none;
+    }
+    .layui-img-list{width: auto;}
+    .layui-img-box{display: inline-block;width:250px;height:150px;overflow: hidden;position: relative;}
+    .layui-img-box i{display: none;}
+    .layui-img-box:hover i{position: absolute;z-index: 2;right: 4px;top: 4px;font-size: 18px;cursor: pointer;color: #f43530;display: block;}
+    .layui-img-box img{width:250px;height:150px;}
+    .layui-img-box span{display: block;min-width: 100%;position: absolute;z-index: 2;left: 0;bottom: 0;background: #179b16;color: #fff;padding: 3px;}
+</style>
+<div style="padding-left: 20px;padding-right: 20px;padding-top: 20px;">
+    <div class="layui-form  layui-form-pane">
+        <div class="layui-form-item">
+            <label class="layui-form-label">关键字</label>
+            <div class="layui-input-inline">
+                <input type="text" name="keyword" required lay-verify="required" placeholder="请输入关键字" autocomplete="off"
+                       class="layui-input" value="2">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">状态</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="status" lay-skin="switch"
+                       lay-text="开启|停用" checked>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">回复类型</label>
+            <div class="layui-input-inline">
+                <select name="response_type" lay-filter="res_type" lay-verify="required" id="response_type">
+                    <option value="0">文字</option>
+                    <option value="1">图文</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">回复内容</label>
+            <div class="layui-input-block">
+                <textarea name="response_text" placeholder="回复内容" class="layui-textarea" id="response_text"  style='display:none'><a href='http://www.baidu.com'>百度</a></textarea>
+                <div class="layui-img-list" id="response_source_ids">
+                    <div class="layui-img-box" data-name="64">
+                        <i class="layui-icon">&#xe640;</i>
+                        <img  src="banner_03.jpg">
+                        <span>标题标题标题标题</span>
+                    </div>
+                    <div class="layui-img-box" data-name="64">
+                        <i class="layui-icon">&#xe640;</i>
+                        <img  src="banner_03.jpg">
+                    </div>
+                    <div class="layui-img-box" data-name="64">
+                        <i class="layui-icon">&#xe640;</i>
+                        <img  src="banner_03.jpg">
+                    </div>
+                    <div class="layui-img-box" data-name="64">
+                        <i class="layui-icon">&#xe640;</i>
+                        <img  src="banner_03.jpg">
+                    </div>
+                </div>
+                <button class="layui-btn reply-resource" id='response_resource' >
+                    <i class="layui-icon">&#xe608;</i> 设置资源
+                </button>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    if (top.location != location) {
+        var pindex = parent.layer.getFrameIndex(window.name); //获取窗口索引
+        table_index = "0";
+    }
+
+    var re_type = "1";
+
+
+
+
+    layui.use('form', function () {
+        var form = layui.form;
+
+        $("#response_type").val(re_type);
+        form.render();
+
+        form.on('select(res_type)', function (data) {
+            console.log(data);
+            res_type = data.value;
+            if (res_type == '1') {
+                $("#response_text").hide();
+                $("#response_resource").show();
+                console.log('1');
+            }
+            if (res_type == '0') {
+                $("#response_resource").hide();
+                $("#response_text").show();
+                form.render();
+            }
+
+        });
+        form.on('submit(formDemo)', function (data) {
+            var resType=[];
+            if (data.field.response_type == 1) {
+                $('.layui-img-box').each(function(){
+                    resType.push($(this).attr('data-name'));
+                });
+                if (resType.length ==0) {
+                    layer.msg('请选择至少一个资源');
+                    return false;
+                }
+            } else {
+                if (data.field.response_text == '') {
+                    layer.msg('请填写回复内容');
+                    return false;
+                }
+            }
+//            layer.msg(JSON.stringify(data.field));
+            field = data.field;
+            if (field.status == 'on') {
+                field.status = 1;
+            } else {
+                field.status = 0;
+            }
+            reply_id = "2";
+            json = JSON.stringify(field);
+            $.post("/backend/web/wechat-reply/save", {json: json, reply_id: reply_id,resType:resType}, function (ret) {
+                if (ret.code == 0) {
+                    parent.$("#table").bootstrapTable('updateRow', {index: table_index, row: ret.data});
+                    parent.layer.msg('操作成功');
+                    parent.layer.close(pindex);
+
+                } else {
+                    layer.msg(ret.msg);
+                }
+            })
+            return false;
+        });
+    });
+
+    $(".reply-resource").click(function () {
+        response_type = $("#response_type").val();
+        if (response_type == '') {
+            layer.msg('请选择回复类型');
+            return false;
+        } else {
+            layer.open({
+                type: 2,
+                area: ['80%', '80%'],
+                content: '/backend/web/wechat-resource/get-resource',
+            })
+        }
+    });
+
+    //删除回复内容
+    $(document).on('click','.layui-img-box .layui-icon',function(){
+        $(this).parent().remove();
+    })
+</script></body>
+</html>

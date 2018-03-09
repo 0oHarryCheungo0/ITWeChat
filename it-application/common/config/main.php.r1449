@@ -1,0 +1,32 @@
+<?php
+return [
+    'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+    'components' => [
+        'wechat' => [
+            'class' => 'common\components\WechatApp',
+            'redis' => true,
+        ],
+        'redis' => [
+            'class' => 'yii\redis\Connection',
+            'hostname' => 'test.oftenfull.com',
+            'port' => 6379,
+            'password' => 'oftenfull',
+            'database' => 0,
+        ],
+        'db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'mysql:host=127.0.0.1;dbname=itwechat',
+            'username' => 'itwechat', //数据库用户名
+            'password' => 'itwechat!@#$', //数据库密码
+            'charset' => 'utf8mb4',
+            'enableSchemaCache' => true,
+            'schemaCacheDuration'=>0,
+        ],
+        'helper' => [
+            'class' => 'common\components\Helper',
+        ],
+        'cache' => [
+            'class' => 'yii\redis\Cache',
+        ],
+    ],
+];
